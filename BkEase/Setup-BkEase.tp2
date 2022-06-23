@@ -1,0 +1,20 @@
+BACKUP ~BkEaseBackup~
+AUTHOR ~blackkensai7@hotmail.com~
+VERSION ~v1.0~
+//README ~BkEase/readme/index.html~
+
+LANGUAGE "English"
+  ~BkEase/lang/English/~
+  ~BkEase/lang/English/setup.tra~
+
+/// Makes your familiar to thief ///
+
+BEGIN @0 DESIGNATED 100
+
+INCLUDE "BkEase/lib/components/familiar.tph"
+
+/// Makes Imoen to have 18 wisdom ///
+
+BEGIN @1 DESIGNATED 101
+
+INCLUDE "BkEase/lib/components/imoen_wis.tph"

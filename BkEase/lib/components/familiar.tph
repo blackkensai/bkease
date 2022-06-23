@@ -1,0 +1,31 @@
+PRINT @10
+
+COPY_EXISTING ~FAMPSD.cre~ ~Override/FAMPSD.cre~
+  WRITE_BYTE  0x65 0 // Set traps
+  WRITE_BYTE  0x67 100 // Lockpicking
+  WRITE_BYTE  0x68 0 // Stealth
+  WRITE_BYTE  0x69 100 // Find traps
+  WRITE_BYTE  0x273 4 // class
+
+COPY_EXISTING ~FAMPSD25.cre~ ~Override/FAMPSD25.cre~
+  WRITE_BYTE  0x65 0 // Set traps
+  WRITE_BYTE  0x67 100 // Lockpicking
+  WRITE_BYTE  0x68 0 // Stealth
+  WRITE_BYTE  0x69 100 // Find traps
+  WRITE_BYTE  0x273 4 // class
+  
+PRINT @11
+  
+COPY_EXISTING ~FAMFAIR.cre~ ~Override/FAMFAIR.cre~
+  WRITE_BYTE  0x65 0 // Set traps
+  WRITE_BYTE  0x67 100 // Lockpicking
+  WRITE_BYTE  0x68 0 // Stealth
+  WRITE_BYTE  0x69 100 // Find traps
+  WRITE_BYTE  0x273 4 // class
+  
+COPY_EXISTING ~FAMFAI25.cre~ ~Override/FAMFAI25.cre~
+  WRITE_BYTE  0x65 0 // Set traps
+  WRITE_BYTE  0x67 100 // Lockpicking
+  WRITE_BYTE  0x68 0 // Stealth
+  WRITE_BYTE  0x69 100 // Find traps
+  WRITE_BYTE  0x273 4 // class

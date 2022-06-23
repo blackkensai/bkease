@@ -1,0 +1,5 @@
+COPY_EXISTING ~imoen10.cre~ ~override/imoen10.cre~
+              ~imoen15.cre~ ~override/imoen15.cre~
+              ~imoen213.cre~ ~override/imoen211.cre~
+              ~imoen213.cre~ ~override/imoen213.cre~
+	WRITE_BYTE  0x23b  18 // wisdom
