@@ -1,0 +1,59 @@
+COPY_EXISTING ~viconi6.cre~ ~override/viconi6.cre~
+              ~viconi8.cre~ ~override/viconi8.cre~
+              ~viconi9.cre~ ~override/viconi9.cre~
+              ~viconi11.cre~ ~override/viconi11.cre~
+              ~viconi13.cre~ ~override/viconi13.cre~
+              ~viconi16.cre~ ~override/viconi16.cre~                            
+  WRITE_SHORT 0x24   12 // current HP
+  WRITE_SHORT 0x26   12 // max HP
+  WRITE_SHORT 0x28  0x6110 // animation
+  WRITE_BYTE  0x234  1 // current level
+  
+  WRITE_BYTE  0x238 18 // strength
+  WRITE_BYTE  0x239 50 // strength % bonus
+  WRITE_BYTE  0x23a 12 // intelligence
+  WRITE_BYTE  0x23b 10 // wisdom
+  WRITE_BYTE  0x23c 19 // dexterity
+  WRITE_BYTE  0x23d 16 // constitution
+  WRITE_BYTE  0x23e 11 // charisma
+
+  WRITE_SHORT 0x244 0
+  WRITE_SHORT 0x246 0x402c // kit
+  WRITE_BYTE  0x273 2 // class
+
+  REMOVE_KNOWN_SPELLS
+  REMOVE_MEMORIZED_SPELLS
+
+  SPRINT ~opcode_to_delete~ ~233~
+  LAUNCH_PATCH_MACRO ~DELETE_CRE_EFFECT~
+
+  // flails
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 2
+    parameter2 = 100
+  END
+
+  // axe
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 2
+    parameter2 = 92
+  END
+
+  // dual-wielding
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 2
+    parameter2 = 114
+  END
+
+
+COPY_EXISTING ~BALDUR.BCS~ ~override\BALDUR.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY      ~ReputationInc(-2)~      ~~
+    REPLACE_TEXTUALLY      ~ReputationInc(2)~      ~~
+  END

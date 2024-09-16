@@ -1,5 +1,5 @@
 BACKUP ~BkEaseBackup~
-AUTHOR ~blackkensai7@hotmail.com~
+AUTHOR ~blackkensai7@outlook.com~
 VERSION ~v1.0~
 //README ~BkEase/readme/index.html~
 
@@ -13,8 +13,20 @@ BEGIN @0 DESIGNATED 100
 
 INCLUDE "BkEase/lib/components/familiar.tph"
 
-/// Makes Imoen to have 18 wisdom ///
+/// Change Viconia to Riskbreaker ///
 
 BEGIN @1 DESIGNATED 101
 
-INCLUDE "BkEase/lib/components/imoen_wis.tph"
+INCLUDE "BkEase/lib/components/viconia.tph"
+
+/// Makes NPCs happy when reputation is 20 ///
+
+BEGIN @2 DESIGNATED 102
+
+INCLUDE "BkEase/lib/components/npc_happy.tph"
+
+/// Makes Imoen to have 18 wisdom ///
+
+// BEGIN @100 DESIGNATED 101
+
+// INCLUDE "BkEase/lib/components/imoen_wis.tph"

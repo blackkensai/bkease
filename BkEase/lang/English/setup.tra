@@ -1,4 +1,8 @@
 @0 = ~Changes your familiar to thief~
-@1 = ~Makes Imoen to have 18 wisdom~
+
+@1 = ~Change Viconia to Riskbreaker(and remove reputation reduction)~
+@2 = ~Makes NPCs happy when reputation is 20~
 
 @10 = ~Patch Pseudo Dragon and Fairy Dragon~
+
+@100 = ~Makes Imoen to have 18 wisdom~
