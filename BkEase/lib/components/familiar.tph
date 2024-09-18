@@ -4,8 +4,21 @@ COPY_EXISTING ~FAMPSD.cre~ ~Override/FAMPSD.cre~
               ~FAMPSD25.cre~ ~Override/FAMPSD25.cre~
               ~FAMFAIR.cre~ ~Override/FAMFAIR.cre~
               ~FAMFAI25.cre~ ~Override/FAMFAI25.cre~
+  WRITE_SHORT 0x24      1 // current hp
+  WRITE_SHORT 0x26      1 // max hp              
   WRITE_BYTE  0x65 0 // Set traps
   WRITE_BYTE  0x67 100 // Lockpicking
   WRITE_BYTE  0x68 0 // Stealth
   WRITE_BYTE  0x69 100 // Find traps
   WRITE_BYTE  0x273 4 // class
+
+// makes find familiar scroll can be used by any classes.
+COPY_EXISTING ~SCRL6D.itm~ ~override/SCRL6D.itm~
+  WRITE_LONG 0x1e 0
+  WRITE_BYTE 0x29 0b00000000
+  WRITE_BYTE 0x2b 0b00000000
+  WRITE_BYTE 0x2d 0b00000000
+  WRITE_BYTE 0x2f 0b00000000
+  BUT_ONLY
+
+EXTEND_BOTTOM ~AR0602.BCS~ ~BkEase/lib/components/AR0602_familiar_scroll.baf~

@@ -1,0 +1,7 @@
+IF
+  Global("BKContainers","AR0602",0)
+THEN
+  RESPONSE #100
+    SetGlobal("BKContainers","AR0602",1)
+    ActionOverride("Chest 7",CreateItem("SCRL6D",0,0,0))  // find familiar scroll
+END
