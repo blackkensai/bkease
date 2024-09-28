@@ -25,6 +25,12 @@ BEGIN @2 DESIGNATED 102
 
 INCLUDE "BkEase/lib/components/npc_happy.tph"
 
+/// Change Aerie to Wizard slayer ///
+
+BEGIN @3 DESIGNATED 103
+
+INCLUDE "BkEase/lib/components/aerie.tph"
+
 /// Makes Imoen to have 18 wisdom ///
 
 // BEGIN @100 DESIGNATED 101
