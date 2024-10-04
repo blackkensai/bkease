@@ -16,6 +16,7 @@ COPY_EXISTING ~viconi6.cre~ ~override/viconi6.cre~
   WRITE_BYTE  0x23c 18 // dexterity
   WRITE_BYTE  0x23d 16 // constitution
   WRITE_BYTE  0x23e 11 // charisma
+  WRITE_BYTE  0x5d      20 // resist magic
 
   WRITE_SHORT 0x244 0
   WRITE_SHORT 0x246 0x402c // kit
