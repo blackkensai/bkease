@@ -1,0 +1,18 @@
+COPY_EXISTING ~S!sw24.itm~ ~override/S!sw24.itm~
+
+  // remove restriction by class
+  LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 319 END
+
+    LPF ADD_ITEM_EQEFFECT INT_VAR
+        opcode = 319
+        target = 1
+        parameter1 = 11
+        parameter2 = 0
+        timing = 2
+        probability1 = 100
+        probability2 = 0
+        STR_VAR
+        resource = AERIE
+    END
+
+  BUT_ONLY

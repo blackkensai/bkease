@@ -1,8 +1,10 @@
 @0 = ~Changes your familiar to thief~
 
-@1 = ~Change Viconia to Riskbreaker(and remove reputation reduction)~
+@1 = ~Change Viconia to Riskbreaker(and remove reputation reduction, lower magic resistence to 20%)~
 @2 = ~Makes NPCs happy when reputation is 20~
 @3 = ~Change Aerie to Wizard slayer~
+@4 = ~Change Pendant of Recovered Light usablity by Viconia~
+@5 = ~Change Sword of the Rashemi +5 usablity by Aerie~
 
 @10 = ~Patch Pseudo Dragon and Fairy Dragon~
 

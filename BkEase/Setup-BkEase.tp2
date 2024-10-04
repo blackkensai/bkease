@@ -31,6 +31,18 @@ BEGIN @3 DESIGNATED 103
 
 INCLUDE "BkEase/lib/components/aerie.tph"
 
+/// Change Pendant of Recovered Light usablity by Viconia ///
+
+BEGIN @4 DESIGNATED 104
+
+INCLUDE "BkEase/lib/components/imoen_amulet_to_voconia.tph"
+
+/// Change Sword of the Rashemi +5 usablity by Aerie ///
+
+BEGIN @5 DESIGNATED 105
+
+INCLUDE "BkEase/lib/components/minsc_sword_to_aerie.tph"
+
 /// Makes Imoen to have 18 wisdom ///
 
 // BEGIN @100 DESIGNATED 101
