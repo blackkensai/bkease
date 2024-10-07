@@ -1,0 +1,29 @@
+// IF
+//   Global("ohn_barad_plot","GLOBAL",2)
+//   Global("ohn_spawn_cats","OH6000",0)
+// THEN
+//   RESPONSE #100
+//     SetGlobal("ohn_spawn_cats","OH6000",1)
+//     CreateCreature("OHNCAT",[4290.1465],NE)
+//     CreateCreature("OHNCAT",[4215.3465],E)
+//     CreateCreature("OHNCAT",[2350.3730],SE)
+//     CreateCreature("OHNCAT",[225.2575],S)
+//     CreateCreature("OHNCAT",[1095.1315],SW)
+//     CreateCreature("OHNCAT",[2380.2830],NW)
+//     CreateCreature("OHNCAT",[2815.1000],SW)
+//     CreateCreature("OHNCAT",[3380.2130],NE)
+// END
+// PartyHasItem("OHNCAT")
+// Gravel Pit
+
+COPY_EXISTING ~OH6000.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[4290.1465],NE)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[4215.3465],E)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[2350.3730],SE)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[225.2575],S)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[1095.1315],SW)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[2380.2830],NW)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[2815.1000],SW)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+        REPLACE_TEXTUALLY ~CreateCreature("OHNCAT",[3380.2130],NE)~ ~ActionOverride("Gravel Pit",CreateItem("OHNCAT",0,0,0))~
+    END

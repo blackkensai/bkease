@@ -43,6 +43,12 @@ BEGIN @5 DESIGNATED 105
 
 INCLUDE "BkEase/lib/components/minsc_sword_to_aerie.tph"
 
+/// Move Barad Ding's eight cats in the Gravel Pit ///
+
+BEGIN @110 DESIGNATED 110
+
+INCLUDE "BkEase/lib/components/cats.tph"
+
 /// Makes Imoen to have 18 wisdom ///
 
 // BEGIN @100 DESIGNATED 101
