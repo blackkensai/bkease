@@ -49,6 +49,12 @@ BEGIN @110 DESIGNATED 110
 
 INCLUDE "BkEase/lib/components/cats.tph"
 
+/// Romance: Multiple NPCs Concurrently ///
+
+BEGIN @200 DESIGNATED 200
+
+INCLUDE "BkEase/lib/components/romance.tph"
+
 /// Makes Imoen to have 18 wisdom ///
 
 // BEGIN @100 DESIGNATED 101
