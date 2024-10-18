@@ -1,6 +1,5 @@
-COPY_EXISTING ~AERIE.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
+<<<<<<<< .../inlined/old-aerie.baf
+IF
     InParty(Myself)
     Global("AerieRomanceActive","GLOBAL",2)
     OR(2)
@@ -20,8 +19,14 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("DornRomanceActive","GLOBAL",3)
-END~ ~~
-        REPLACE_TEXTUALLY ~IF
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-aerie.baf
+>>>>>>>>
+
+<<<<<<<< .../inlined/old-aerie2.baf
+IF
     InParty(Myself)
     Global("AerieRomanceActive","GLOBAL",2)
     OR(2)
@@ -41,112 +46,167 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("ViconiaRomanceActive","GLOBAL",3)
-END~ ~~
-    END
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-aerie2.baf
+>>>>>>>>
+
+COPY_EXISTING ~AERIE.bcs~ ~override~
+    REPLACE_BCS_BLOCK ~.../inlined/old-aerie.baf~ ~.../inlined/new-aerie.baf~
+    REPLACE_BCS_BLOCK ~.../inlined/old-aerie2.baf~ ~.../inlined/new-aerie2.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-AERI25.baf
+IF
+    InParty(Myself)
+    Global("AerieRomanceActive","GLOBAL",2)
+    OR(2)
+        Global("JaheiraRomanceActive","GLOBAL",1)
+        Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+    InParty(Myself)
+    Global("AerieRomanceActive","GLOBAL",2)
+    OR(2)
+        Global("ViconiaRomanceActive","GLOBAL",1)
+        Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-AERI25.baf
+>>>>>>>>
 
 COPY_EXISTING ~AERI25.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
-    InParty(Myself)
-    Global("AerieRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("JaheiraRomanceActive","GLOBAL",1)
-        Global("JaheiraRomanceActive","GLOBAL",2)
+    REPLACE_BCS_BLOCK ~.../inlined/old-AERI25.baf~ ~.../inlined/new-AERI25.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-JAHEIRA.baf
+IF
+	InParty(Myself)
+	Global("JaheiraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
 THEN
-    RESPONSE #100
-        SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+	RESPONSE #100
+		SetGlobal("NeeraRomanceActive","GLOBAL",3)
 END
 
 IF
-    InParty(Myself)
-    Global("AerieRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("ViconiaRomanceActive","GLOBAL",1)
-        Global("ViconiaRomanceActive","GLOBAL",2)
+	InParty(Myself)
+	Global("JaheiraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("DornRomanceActive","GLOBAL",1)
+		Global("DornRomanceActive","GLOBAL",2)
 THEN
-    RESPONSE #100
-        SetGlobal("ViconiaRomanceActive","GLOBAL",3)
-END~ ~~
-    END
+	RESPONSE #100
+		SetGlobal("DornRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("JaheiraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("AerieRomanceActive","GLOBAL",1)
+		Global("AerieRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("JaheiraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("ViconiaRomanceActive","GLOBAL",1)
+		Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-JAHEIRA.baf
+>>>>>>>>
 
 COPY_EXISTING ~JAHEIRA.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
-    Global("JaheiraRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("AerieRomanceActive","GLOBAL",1)
-        Global("AerieRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("AerieRomanceActive","GLOBAL",3)
-END
-
-IF
-    Global("JaheiraRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("ViconiaRomanceActive","GLOBAL",1)
-        Global("ViconiaRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("ViconiaRomanceActive","GLOBAL",3)
-END~ ~~
-    END
+    REPLACE_BCS_BLOCK ~.../inlined/old-JAHEIRA.baf~ ~.../inlined/new-JAHEIRA.baf~
+    BUT_ONLY_IF_IT_CHANGES
 
 // COPY_EXISTING ~JAHE25.bcs~ ~override~
 //     DECOMPILE_AND_PATCH BEGIN
 //         REPLACE_TEXTUALLY ~~ ~~
 //     END
 
+<<<<<<<< .../inlined/old-VICONIA.baf
+IF
+	InParty(Myself)
+	Global("ViconiaRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("NeeraRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("ViconiaRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("DornRomanceActive","GLOBAL",1)
+		Global("DornRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("DornRomanceActive","GLOBAL",3)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-VICONIA.baf
+>>>>>>>>
+
+<<<<<<<< .../inlined/old-VICONIA2.baf
+IF
+	InParty(Myself)
+	Global("ViconiaRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("JaheiraRomanceActive","GLOBAL",1)
+		Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("ViconiaRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("AerieRomanceActive","GLOBAL",1)
+		Global("AerieRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-VICONIA2.baf
+>>>>>>>>
+
 COPY_EXISTING ~VICONIA.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
-    InParty(Myself)
-    Global("ViconiaRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("NeeraRomanceActive","GLOBAL",1)
-        Global("NeeraRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("NeeraRomanceActive","GLOBAL",3)
-END
+    REPLACE_BCS_BLOCK ~.../inlined/old-VICONIA.baf~ ~.../inlined/new-VICONIA.baf~
+    REPLACE_BCS_BLOCK ~.../inlined/old-VICONIA2.baf~ ~.../inlined/new-VICONIA2.baf~
+    BUT_ONLY_IF_IT_CHANGES
 
+<<<<<<<< .../inlined/old-VICO25.baf
 IF
-    InParty(Myself)
-    Global("ViconiaRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("DornRomanceActive","GLOBAL",1)
-        Global("DornRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("DornRomanceActive","GLOBAL",3)
-END~ ~~
-
-        REPLACE_TEXTUALLY ~IF
-    InParty(Myself)
-    Global("ViconiaRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("JaheiraRomanceActive","GLOBAL",1)
-        Global("JaheiraRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("JaheiraRomanceActive","GLOBAL",3)
-END
-
-IF
-    InParty(Myself)
-    Global("ViconiaRomanceActive","GLOBAL",2)
-    OR(2)
-        Global("AerieRomanceActive","GLOBAL",1)
-        Global("AerieRomanceActive","GLOBAL",2)
-THEN
-    RESPONSE #100
-        SetGlobal("AerieRomanceActive","GLOBAL",3)
-END~ ~~
-    END
-
-COPY_EXISTING ~VICO25.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
     Global("ViconiaRomanceActive","GLOBAL",2)
     OR(2)
         Global("AerieRomanceActive","GLOBAL",2)
@@ -154,57 +214,266 @@ COPY_EXISTING ~VICO25.bcs~ ~override~
 THEN
     RESPONSE #100
         SetGlobal("ViconiaRomanceActive","GLOBAL",3)
-END~ ~~
-    END
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-VICO25.baf
+>>>>>>>>
+
+COPY_EXISTING ~VICO25.bcs~ ~override~
+    REPLACE_BCS_BLOCK ~.../inlined/old-VICO25.baf~ ~.../inlined/new-VICO25.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-neera.baf
+IF
+	InParty(Myself)
+	Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("JaheiraRomanceActive","GLOBAL",1)
+		Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("DornRomanceActive","GLOBAL",1)
+		Global("DornRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("DornRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("AerieRomanceActive","GLOBAL",1)
+		Global("AerieRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+	InParty(Myself)
+	Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("ViconiaRomanceActive","GLOBAL",1)
+		Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-neera.baf
+>>>>>>>>
+
+<<<<<<<< .../inlined/old-neera2.baf
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("jaheira")  // Jaheira
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	GlobalGT("NeeraLovetalks","GLOBAL",9)
+	OR(2)
+		Global("JaheiraRomanceActive","GLOBAL",1)
+		Global("JaheiraRomanceActive","GLOBAL",2)
+	Global("OHN_jaheiraconflict","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_jaheiraconflict","GLOBAL",1)
+		RealSetGlobalTimer("OHN_jaheiraconflict_timer","GLOBAL",NINE_HOURS)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("jaheira")  // Jaheira
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("JaheiraRomanceActive","GLOBAL",1)
+		Global("JaheiraRomanceActive","GLOBAL",2)
+	Global("OHN_jaheiraconflict","GLOBAL",1)
+	RealGlobalTimerExpired("OHN_jaheiraconflict_timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_jaheiraconflict","GLOBAL",2)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("jaheira")  // Jaheira
+	CombatCounter(0)
+	!AreaType(DUNGEON)
+	!See([ENEMY])
+	Global("OHN_jaheiraconflict","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("viconia")  // Viconia
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	GlobalGT("neeraLovetalks","GLOBAL",9)
+	OR(2)
+		Global("ViconiaRomanceActive","GLOBAL",1)
+		Global("ViconiaRomanceActive","GLOBAL",2)
+	Global("OHN_viconiaconflict","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_viconiaconflict","GLOBAL",1)
+		RealSetGlobalTimer("OHN_viconiaconflict_timer","GLOBAL",NINE_HOURS)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("viconia")  // Viconia
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("ViconiaRomanceActive","GLOBAL",1)
+		Global("ViconiaRomanceActive","GLOBAL",2)
+	Global("OHN_viconiaconflict","GLOBAL",1)
+	RealGlobalTimerExpired("OHN_viconiaconflict_timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_viconiaconflict","GLOBAL",2)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("viconia")  // Viconia
+	CombatCounter(0)
+	!AreaType(DUNGEON)
+	!See([ENEMY])
+	Global("OHN_viconiaconflict","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("aerie")  // Aerie
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	GlobalGT("neeraLovetalks","GLOBAL",9)
+	OR(2)
+		Global("AerieRomanceActive","GLOBAL",1)
+		Global("AerieRomanceActive","GLOBAL",2)
+	Global("OHN_aerieconflict","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_aerieconflict","GLOBAL",1)
+		RealSetGlobalTimer("OHN_aerieconflict_timer","GLOBAL",NINE_HOURS)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("aerie")  // Aerie
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("AerieRomanceActive","GLOBAL",1)
+		Global("AerieRomanceActive","GLOBAL",2)
+	Global("OHN_aerieconflict","GLOBAL",1)
+	RealGlobalTimerExpired("OHN_aerieconflict_timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_aerieconflict","GLOBAL",2)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("aerie")  // Aerie
+	CombatCounter(0)
+	!AreaType(DUNGEON)
+	!See([ENEMY])
+	Global("OHN_aerieconflict","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("dorn")  // Dorn
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	GlobalGT("NeeraLovetalks","GLOBAL",9)
+	OR(2)
+		Global("DornRomanceActive","GLOBAL",1)
+		Global("DornRomanceActive","GLOBAL",2)
+	GlobalGT("DornLovetalks","GLOBAL",9)
+	Global("OHN_dornconflict","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_dornconflict","GLOBAL",1)
+		RealSetGlobalTimer("OHN_dornconflict_timer","GLOBAL",NINE_HOURS)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("dorn")  // Dorn
+	OR(2)
+		Global("NeeraRomanceActive","GLOBAL",1)
+		Global("NeeraRomanceActive","GLOBAL",2)
+	OR(2)
+		Global("DornRomanceActive","GLOBAL",1)
+		Global("DornRomanceActive","GLOBAL",2)
+	Global("OHN_dornconflict","GLOBAL",1)
+	RealGlobalTimerExpired("OHN_dornconflict_timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("OHN_dornconflict","GLOBAL",2)
+		Continue()
+END
+
+IF
+	IfValidForPartyDialog("neera")  // Neera
+	IfValidForPartyDialog("dorn")  // Dorn
+	CombatCounter(0)
+	!AreaType(DUNGEON)
+	!See([ENEMY])
+	Global("OHN_dornconflict","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-neera2.baf
+>>>>>>>>
 
 COPY_EXISTING ~neera.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~IF
-    InParty(Myself)
-    Global(\"NeeraRomanceActive\",\"GLOBAL\",2)
-    OR(2)
-        Global(\"JaheiraRomanceActive\",\"GLOBAL\",1)
-        Global(\"JaheiraRomanceActive\",\"GLOBAL\",2)
-THEN
-    RESPONSE #100
-        SetGlobal(\"JaheiraRomanceActive\",\"GLOBAL\",3)
-END
-
-IF
-    InParty(Myself)
-    Global(\"NeeraRomanceActive\",\"GLOBAL\",2)
-    OR(2)
-        Global(\"DornRomanceActive\",\"GLOBAL\",1)
-        Global(\"DornRomanceActive\",\"GLOBAL\",2)
-THEN
-    RESPONSE #100
-        SetGlobal(\"DornRomanceActive\",\"GLOBAL\",3)
-END
-
-IF
-    InParty(Myself)
-    Global(\"NeeraRomanceActive\",\"GLOBAL\",2)
-    OR(2)
-        Global(\"AerieRomanceActive\",\"GLOBAL\",1)
-        Global(\"AerieRomanceActive\",\"GLOBAL\",2)
-THEN
-    RESPONSE #100
-        SetGlobal(\"AerieRomanceActive\",\"GLOBAL\",3)
-END
-
-IF
-    InParty(Myself)
-    Global(\"NeeraRomanceActive\",\"GLOBAL\",2)
-    OR(2)
-        Global(\"ViconiaRomanceActive\",\"GLOBAL\",1)
-        Global(\"ViconiaRomanceActive\",\"GLOBAL\",2)
-THEN
-    RESPONSE #100
-        SetGlobal(\"ViconiaRomanceActive\",\"GLOBAL\",3)
-END~ ~~
-    END
+    REPLACE_BCS_BLOCK ~.../inlined/old-neera.baf~ ~.../inlined/new-neera.baf~
+    REPLACE_BCS_BLOCK ~.../inlined/old-neera2.baf~ ~.../inlined/new-neera2.baf~
+    BUT_ONLY_IF_IT_CHANGES
 
 // COPY_EXISTING ~neer25.bcs~ ~override~
 //     DECOMPILE_AND_PATCH BEGIN
 //         REPLACE_TEXTUALLY ~~ ~~
 //     END
+
