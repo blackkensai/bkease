@@ -1,5 +1,5 @@
 
-COPY_EXISTING ~s!sw24.itm~ ~override/s!sw24.itm~
+COPY_EXISTING ~s!sw24.itm~ ~override~
 
   // remove restriction by class
   LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 319 END

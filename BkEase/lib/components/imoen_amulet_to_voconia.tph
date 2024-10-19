@@ -14,7 +14,7 @@
 //    WRITE_LONG   (0x24 + 0x30 * insert_point + fx_off) savingthrow
 //    WRITE_LONG   (0x28 + 0x30 * insert_point + fx_off) savebonus
 
-COPY_EXISTING ~s!amul08.itm~ ~override/s!amul08.itm~
+COPY_EXISTING ~s!amul08.itm~ ~override~
 
   // remove restriction by class
   LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 319 END
