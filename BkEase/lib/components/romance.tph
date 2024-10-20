@@ -477,3 +477,12 @@ COPY_EXISTING ~neera.bcs~ ~override~
 //         REPLACE_TEXTUALLY ~~ ~~
 //     END
 
+COPY_EXISTING ~BAERIE.DLG~ ~override~
+ DECOMPILE_AND_PATCH BEGIN
+   REPLACE_TEXTUALLY ~  OR(2)
+!Global("ViconiaRomanceActive","GLOBAL",1)
+!IfValidForPartyDialogue("Viconia")
+OR(2)
+!Global("JaheiraRomanceActive","GLOBAL",1)
+!IfValidForPartyDialogue("Jaheira")~ ~Global("AerieRomanceActive","GLOBAL",1)~
+ END

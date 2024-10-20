@@ -7,6 +7,12 @@ LANGUAGE "English"
   ~BkEase/lang/English/~
   ~BkEase/lang/English/setup.tra~
 
+/// Test
+
+BEGIN @999 DESIGNATED 1
+
+INCLUDE "BkEase/lib/components/test.tph"
+
 /// Makes your familiar to thief ///
 
 BEGIN @0 DESIGNATED 100
