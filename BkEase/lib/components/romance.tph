@@ -479,10 +479,8 @@ COPY_EXISTING ~neera.bcs~ ~override~
 
 COPY_EXISTING ~BAERIE.DLG~ ~override~
  DECOMPILE_AND_PATCH BEGIN
-   REPLACE_TEXTUALLY ~  OR(2)
-!Global("ViconiaRomanceActive","GLOBAL",1)
-!IfValidForPartyDialogue("Viconia")
-OR(2)
-!Global("JaheiraRomanceActive","GLOBAL",1)
-!IfValidForPartyDialogue("Jaheira")~ ~Global("AerieRomanceActive","GLOBAL",1)~
+  REPLACE_TEXTUALLY ~!Global("ViconiaRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
+  REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Viconia")~ ~IsValidForPartyDialogue("Aerie")~
+  REPLACE_TEXTUALLY ~!Global("JaheiraRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
+  REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Jaheira")~ ~IsValidForPartyDialogue("Aerie")~
  END

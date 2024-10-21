@@ -1,8 +1,2 @@
 PRINT ~TEST~
 
-COPY_EXISTING ~BAERIE.DLG~ ~override~
- DECOMPILE_AND_PATCH BEGIN
-   REPLACE_EVALUATE ~\s*OR(2)\s*!Global("ViconiaRomanceActive","GLOBAL",1)\s*!IfValidForPartyDialogue("Viconia")\s*OR(2)\s*!Global("JaheiraRomanceActive","GLOBAL",1)\s*!IfValidForPartyDialogue("Jaheira")~
-    BEGIN END
- ~Global("AerieRomanceActive","GLOBAL",1)~
- END
