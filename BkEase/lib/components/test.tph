@@ -18,9 +18,44 @@ Global("JaheiraRomanceActive","GLOBAL",1)
 IsValidForPartyDialogue("Jaheira")
 */
 
+<<<<<<<< .../inlined/old-aerie1.baf
+OR(2)
+!Global("ViconiaRomanceActive","GLOBAL",1)
+!IsValidForPartyDialogue("Viconia")
+OR(2)
+!Global("JaheiraRomanceActive","GLOBAL",1)
+!IsValidForPartyDialogue("Jaheira")
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-aerie1.baf
+Global("AerieRomanceActive","GLOBAL",1)
+>>>>>>>>
+
+<<<<<<<< .../inlined/old-aerie2.baf
+Global("ViconiaRomanceActive","GLOBAL",1)
+IsValidForPartyDialogue("Viconia")
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-aerie2.baf
+Global("AerieRomanceActive","GLOBAL",3)
+>>>>>>>>
+
+<<<<<<<< .../inlined/old-aerie3.baf
+OR(2)
+!Global("ViconiaRomanceActive","GLOBAL",1)
+!IsValidForPartyDialogue("Viconia")
+Global("JaheiraRomanceActive","GLOBAL",1)
+IsValidForPartyDialogue("Jaheira")
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-aerie3.baf
+Global("AerieRomanceActive","GLOBAL",3)
+>>>>>>>>
+
 COPY_EXISTING ~BAERIE.DLG~ ~override~
- DECOMPILE_AND_PATCH BEGIN
-  REPLACE_TEXTUALLY ~OR(2) !Global("ViconiaRomanceActive","GLOBAL",1) !IfValidForPartyDialogue("Viconia") OR(2) !Global("JaheiraRomanceActive","GLOBAL",1) !IfValidForPartyDialogue("Jaheira")~ ~Global("AerieRomanceActive","GLOBAL",1)~
-  REPLACE_TEXTUALLY ~Global("ViconiaRomanceActive","GLOBAL",1) IfValidForPartyDialogue("Viconia")~ ~!Global("AerieRomanceActive","GLOBAL",1)~
-  REPLACE_TEXTUALLY ~OR(2) !Global("ViconiaRomanceActive","GLOBAL",1) !IfValidForPartyDialogue("Viconia") Global("JaheiraRomanceActive","GLOBAL",1) IfValidForPartyDialogue("Jaheira")~ ~!Global("AerieRomanceActive","GLOBAL",1)~
- END
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_BCS_BLOCK ~.../inlined/old-aerie1.baf~ ~.../inlined/new-aerie1.baf~
+    REPLACE_BCS_BLOCK ~.../inlined/old-aerie2.baf~ ~.../inlined/new-aerie2.baf~
+    REPLACE_BCS_BLOCK ~.../inlined/old-aerie3.baf~ ~.../inlined/new-aerie3.baf~
+  END
+  BUT_ONLY_IF_IT_CHANGES
