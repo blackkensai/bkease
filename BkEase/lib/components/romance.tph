@@ -477,10 +477,12 @@ COPY_EXISTING ~neera.bcs~ ~override~
 //         REPLACE_TEXTUALLY ~~ ~~
 //     END
 
-COPY_EXISTING ~BAERIE.DLG~ ~override~
- DECOMPILE_AND_PATCH BEGIN
-  REPLACE_TEXTUALLY ~!Global("ViconiaRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
-  REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Viconia")~ ~IsValidForPartyDialogue("Aerie")~
-  REPLACE_TEXTUALLY ~!Global("JaheiraRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
-  REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Jaheira")~ ~IsValidForPartyDialogue("Aerie")~
- END
+// COPY_EXISTING ~BAERIE.DLG~ ~override~
+//  DECOMPILE_AND_PATCH BEGIN
+//   REPLACE_TEXTUALLY ~!Global("ViconiaRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
+//   REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Viconia")~ ~IsValidForPartyDialogue("Aerie")~
+//   REPLACE_TEXTUALLY ~!Global("JaheiraRomanceActive","GLOBAL",1)~ ~Global("AerieRomanceActive","GLOBAL",1)~
+//   REPLACE_TEXTUALLY ~!IsValidForPartyDialogue("Jaheira")~ ~IsValidForPartyDialogue("Aerie")~
+//  END
+
+COMPILE ~BkEase/lib/components/romance.d~
