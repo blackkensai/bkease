@@ -9,9 +9,9 @@ LANGUAGE "English"
 
 /// Test
 
-BEGIN @999 DESIGNATED 1
+// BEGIN @999 DESIGNATED 1
 
-INCLUDE "BkEase/lib/components/test.tph"
+// INCLUDE "BkEase/lib/components/test.tph"
 
 /// Makes your familiar to thief ///
 
